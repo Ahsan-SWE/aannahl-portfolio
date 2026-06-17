@@ -1,6 +1,7 @@
 import TopBar from "./components/TopBar"
 import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
+import Services from "./components/Services"
 
 
 export default function App() { 
@@ -11,6 +12,7 @@ export default function App() {
       <TopBar />
 <Navbar/>
 <Hero/>
+<Services/>
 </div>
   )
 
