@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
 import Services from "./components/Services"
 import MidBanner from "./components/MidBanner"
+import HowWeWork from "./components/HowWeWork"
 
 
 export default function App() { 
@@ -15,6 +16,8 @@ export default function App() {
 <Hero/>
 <Services/>
 <MidBanner/>
+
+<HowWeWork/>
 </div>
   )
 
