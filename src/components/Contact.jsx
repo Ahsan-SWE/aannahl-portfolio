@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
 
 const Contact = () => {
@@ -15,7 +15,7 @@ const Contact = () => {
   return (
     <section className="relative py-32 bg-[#f4f6f8] text-gray-900 overflow-hidden z-0 border-b border-gray-200">
       
-      {/* Soft Animated Gradients behind the form to make the Glassmorphism pop! */}
+   
       <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#f97316] rounded-full filter blur-[150px] opacity-[0.08] pointer-events-none -z-10 animate-pulse"></div>
       <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-blue-200 rounded-full filter blur-[150px] opacity-[0.3] pointer-events-none -z-10"></div>
 
@@ -29,12 +29,12 @@ const Contact = () => {
           <h3 className="text-4xl md:text-6xl font-black tracking-tighter text-gray-900">Let's start a conversation.</h3>
         </motion.div>
 
-        {/* 1 Giant Premium Split Card - Transparent Light Glassmorphism */}
+       
         <motion.div 
           initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
           className="bg-white/40 backdrop-blur-2xl border border-white/60 rounded-[2.5rem] lg:rounded-[3rem] shadow-[0_20px_50px_rgba(0,0,0,0.05)] flex flex-col lg:flex-row overflow-hidden"
         >
-          {/* Left Side: Transparent Minimalist Form */}
+       
           <div className="w-full lg:w-1/2 p-10 lg:p-20 relative">
             <div className="absolute inset-0 bg-gradient-to-br from-white/30 to-transparent pointer-events-none"></div>
             
@@ -53,7 +53,7 @@ const Contact = () => {
               <form className="space-y-10">
                 
                 <div className="flex flex-col md:flex-row gap-10">
-                  {/* Floating Label Input: First Name */}
+                
                   <motion.div variants={fadeUp} className="relative w-full">
                     <input 
                       type="text" 
@@ -69,7 +69,7 @@ const Contact = () => {
                     </label>
                   </motion.div>
 
-                  {/* Floating Label Input: Last Name */}
+                
                   <motion.div variants={fadeUp} className="relative w-full">
                     <input 
                       type="text" 
@@ -86,7 +86,7 @@ const Contact = () => {
                   </motion.div>
                 </div>
 
-                {/* Floating Label Input: Email */}
+              
                 <motion.div variants={fadeUp} className="relative w-full">
                   <input 
                     type="email" 
@@ -102,7 +102,6 @@ const Contact = () => {
                   </label>
                 </motion.div>
 
-                {/* Floating Label Input: Message */}
                 <motion.div variants={fadeUp} className="relative w-full">
                   <textarea 
                     id="message" 
@@ -119,7 +118,7 @@ const Contact = () => {
                 </motion.div>
 
                 <motion.div variants={fadeUp} className="pt-6">
-                  {/* Light Mode Button */}
+                
                   <button type="submit" className="group relative w-full sm:w-auto inline-flex items-center justify-center gap-4 bg-gray-900 text-white px-12 py-4 rounded-full font-extrabold uppercase tracking-widest text-xs hover:bg-[#f97316] hover:shadow-[0_10px_20px_rgba(249,115,22,0.2)] transition-all duration-500">
                     Send Message
                     <span className="w-8 h-[1px] bg-white group-hover:w-12 transition-all duration-500"></span>
@@ -130,7 +129,6 @@ const Contact = () => {
             </motion.div>
           </div>
 
-          {/* Right Side: Always Colorful Map */}
           <div className="w-full lg:w-1/2 min-h-[400px] lg:min-h-full relative bg-gray-100 border-t lg:border-t-0 lg:border-l border-white/60">
             <iframe 
               src="https://maps.google.com/maps?q=House-23,%20Road-4,%20Block-A,%20Banani,%20Dhaka-1213&t=&z=15&ie=UTF8&iwloc=&output=embed" 

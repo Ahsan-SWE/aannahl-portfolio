@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import banner1 from '../img/banner1.jpg';
 
@@ -7,7 +7,7 @@ const Hero = () => {
   const yBg = useTransform(scrollY, [0, 1000], [0, 300]);
   const opacityText = useTransform(scrollY, [0, 400], [1, 0]);
 
-  // Typing Effect Logic
+ 
   const fullText = "Design. Develop. Inspire.";
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -32,14 +32,14 @@ const Hero = () => {
   return (
     <header className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-[#050505]">
       
-      {/* Background Image */}
+   
       <motion.div style={{ y: yBg }} className="absolute inset-0 w-full h-[120%]">
         <img src={banner1} alt="Hero Background" className="w-full h-full object-cover opacity-30" />
       </motion.div>
 
       <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-[#050505]"></div>
       
-      {/* Text Content */}
+     
       <div className="relative z-10 px-6 max-w-5xl mx-auto flex flex-col items-center text-center">
         
         <motion.span 
@@ -49,7 +49,7 @@ const Hero = () => {
           Premium Software Engineering
         </motion.span>
         
-        {/* Animated Gradient Typing Heading */}
+      
         <h1 className="text-5xl md:text-8xl font-black tracking-tighter mb-8 leading-[1.1] min-h-[120px] md:min-h-[180px] bg-gradient-to-r from-orange-300 via-orange-500 to-orange-700 bg-[length:200%_auto] text-transparent bg-clip-text animate-text-shimmer">
           {displayText}
           <motion.span 
@@ -76,7 +76,6 @@ const Hero = () => {
         </motion.button>
       </div>
 
-      {/* Tailwind Custom Animation for Subdued Shimmer */}
       <style dangerouslySetInnerHTML={{__html: `
         @keyframes shimmer {
           0% { background-position: 0% 50%; }

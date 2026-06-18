@@ -7,28 +7,28 @@ const Portfolio = () => {
       title: 'Buzz Moving ERP', 
       cat: 'Logistics Operations',
       span: 'lg:col-span-2', 
-      // Truck/Logistics Dashboard Interface
+     
       img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPJJNHiuWiuqGTWOQt4kJUyNRh2fO_V8F9_gzysWAYWMJdkTIxFB6VVYc&s=10' 
     },
     { 
       title: 'FinEdge Analytics', 
       cat: 'Fintech Dashboard',
       span: 'lg:col-span-1', 
-      // Financial Data/Dashboard UI
+      
       img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800' 
     },
     { 
       title: 'Aura Health App', 
       cat: 'E-Health Portal',
       span: 'lg:col-span-1', 
-      // Clean Medical/Health UI
+      
       img: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=800' 
     },
     { 
       title: 'Cloud Admin Panel', 
       cat: 'SaaS Infrastructure',
       span: 'lg:col-span-2', 
-      // Tech/SaaS Dashboard UI
+      
       img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200' 
     }
   ];

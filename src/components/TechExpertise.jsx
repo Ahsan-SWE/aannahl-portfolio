@@ -10,7 +10,7 @@ import t6 from '../img/t6.png';
 import t7 from '../img/t7.png'; 
 
 const TechExpertise = () => {
-  // Array double kora hoyeche infinite loop er smooth effect er jonno
+  
   const techLogos = [dotnet, t1, t2, t3, t4, t5, t6, t7, dotnet, t1, t2, t3, t4, t5, t6, t7];
   
   return (
@@ -21,9 +21,9 @@ const TechExpertise = () => {
         <h2 className="text-[12px] text-[#f97316] uppercase tracking-[0.2em] font-bold mb-14 text-center">Powered By Top Technologies</h2>
       </motion.div>
 
-      {/* Infinite Scroll Container */}
+    
       <div className="w-full relative flex items-center mt-4">
-        {/* Left & Right gradient shadows for blending effect */}
+      
         <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
         <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
 
@@ -35,13 +35,13 @@ const TechExpertise = () => {
           {techLogos.map((logo, i) => (
             <div 
               key={i} 
-              /* Size updated: 30% bigger (w-32 -> w-44, h-32 -> h-44) */
+           
               className="w-32 h-32 md:w-44 md:h-44 flex-shrink-0 bg-white rounded-3xl flex items-center justify-center border border-gray-100 shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-[0_15px_40px_rgba(249,115,22,0.15)] hover:-translate-y-3 transition-all duration-300 cursor-pointer group p-6"
             >
               <img 
                 src={logo} 
                 alt="Tech Stack" 
-                /* Removed grayscale & opacity, added hover zoom (scale-110) */
+                
                 className="w-full h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-500 ease-out" 
               />
             </div>
