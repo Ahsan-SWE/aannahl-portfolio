@@ -1,4 +1,5 @@
-import React from 'react';
+
+import { motion } from 'framer-motion';
 import dotnet from '../img/dotnet.png';
 import t1 from '../img/t1.png'; 
 import t2 from '../img/t2.png'; 
@@ -9,32 +10,43 @@ import t6 from '../img/t6.png';
 import t7 from '../img/t7.png'; 
 
 const TechExpertise = () => {
-  const techLogos = [dotnet, t1, t2, t3, t4, t5, t6, t7];
+  // Array double kora hoyeche infinite loop er smooth effect er jonno
+  const techLogos = [dotnet, t1, t2, t3, t4, t5, t6, t7, dotnet, t1, t2, t3, t4, t5, t6, t7];
   
   return (
-    <section className="py-24 px-6 bg-gray-50 text-center relative overflow-hidden">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-orange-100 rounded-full blur-[100px] opacity-60 pointer-events-none"></div>
+    <section className="py-24 bg-white border-y border-gray-100 overflow-hidden flex flex-col items-center">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}
+      >
+        <h2 className="text-[12px] text-[#f97316] uppercase tracking-[0.2em] font-bold mb-14 text-center">Powered By Top Technologies</h2>
+      </motion.div>
 
-      <div className="relative z-10">
-        <div className="mb-16">
-          <h2 className="text-3xl font-extrabold uppercase tracking-widest text-black mb-4">Key Tech Expertise</h2>
-          <div className="w-16 h-1 bg-[#f97316] mx-auto rounded-full"></div>
-        </div>
-        
-        <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10 max-w-5xl mx-auto">
-          {techLogos.map((logo, index) => (
+      {/* Infinite Scroll Container */}
+      <div className="w-full relative flex items-center mt-4">
+        {/* Left & Right gradient shadows for blending effect */}
+        <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+
+        <motion.div 
+          animate={{ x: ["0%", "-50%"] }} 
+          transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
+          className="flex gap-12 md:gap-20 px-8 items-center w-max"
+        >
+          {techLogos.map((logo, i) => (
             <div 
-              key={index} 
-              className="w-24 h-24 md:w-32 md:h-32 bg-white rounded-2xl shadow-[0_4px_20px_rgb(0,0,0,0.05)] border border-gray-100 flex items-center justify-center p-4 hover:shadow-[0_10px_30px_rgba(249,115,22,0.15)] hover:-translate-y-2 transition-all duration-300"
+              key={i} 
+              /* Size updated: 30% bigger (w-32 -> w-44, h-32 -> h-44) */
+              className="w-32 h-32 md:w-44 md:h-44 flex-shrink-0 bg-white rounded-3xl flex items-center justify-center border border-gray-100 shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-[0_15px_40px_rgba(249,115,22,0.15)] hover:-translate-y-3 transition-all duration-300 cursor-pointer group p-6"
             >
               <img 
                 src={logo} 
-                alt={`Tech Stack ${index + 1}`} 
-                className="max-w-full max-h-full object-contain drop-shadow-sm" 
+                alt="Tech Stack" 
+                /* Removed grayscale & opacity, added hover zoom (scale-110) */
+                className="w-full h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-500 ease-out" 
               />
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
