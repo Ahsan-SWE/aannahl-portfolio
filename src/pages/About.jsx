@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
 
 const About = () => {
@@ -12,7 +12,7 @@ const About = () => {
     visible: { opacity: 1, transition: { staggerChildren: 0.15 } }
   };
 
-  // Dummy Client Reviews Data
+
   const reviews = [
     {
       id: 1,
@@ -40,12 +40,12 @@ const About = () => {
   return (
     <div className="bg-white min-h-screen pt-[80px]">
       
-      {/* 1. ULTRA-MODERN CINEMATIC HERO SECTION */}
+    
       <section className="relative min-h-[80vh] flex items-center justify-center bg-[#050505] text-white overflow-hidden">
         
-        {/* Abstract Background Elements */}
+       
         <div className="absolute top-0 right-0 w-full h-full overflow-hidden z-0 pointer-events-none">
-          {/* Glowing Orbs */}
+         
           <motion.div 
             animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.2, 0.1] }}
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
@@ -53,10 +53,10 @@ const About = () => {
           ></motion.div>
           <div className="absolute bottom-[-20%] -left-20 w-[500px] h-[500px] bg-yellow-600 rounded-full blur-[150px] opacity-10"></div>
           
-          {/* Modern Grid Pattern */}
+          
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f12_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f12_1px,transparent_1px)] bg-[size:40px_40px]"></div>
           
-          {/* Subtle Image Overlay */}
+         
           <img 
             src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2000" 
             alt="Team Collaboration" 
@@ -86,7 +86,7 @@ const About = () => {
           </motion.p>
         </motion.div>
 
-        {/* Floating Glassmorphism Stats Bar */}
+       
         <motion.div 
           initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.8, duration: 0.8 }}
           className="absolute bottom-10 left-6 right-6 md:left-1/2 md:-translate-x-1/2 md:right-auto md:w-[800px] z-20 bg-white/5 border border-white/10 backdrop-blur-xl rounded-3xl p-6 md:p-8 flex flex-col md:flex-row justify-around items-center gap-8 shadow-2xl"
@@ -109,12 +109,12 @@ const About = () => {
 
       </section>
 
-      {/* 2. STORY SECTION - SPLIT LAYOUT */}
+     
       <section className="py-24 md:py-32 px-6 bg-white">
         <div className="max-w-[90rem] mx-auto">
           <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
             
-            {/* Left Column: Sticky Title */}
+           
             <motion.div 
               initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp}
               className="w-full lg:w-1/3 lg:sticky lg:top-32 h-fit"
@@ -144,7 +144,7 @@ const About = () => {
               </div>
             </motion.div>
 
-            {/* Right Column: Text Content */}
+           
             <motion.div 
               initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer}
               className="w-full lg:w-2/3 prose prose-lg prose-gray max-w-none"
@@ -178,9 +178,9 @@ const About = () => {
         </div>
       </section>
 
-      {/* 3. MODERN CLIENT REVIEWS SECTION */}
+     
       <section className="py-24 md:py-32 px-6 bg-[#f8f9fa] border-t border-gray-100 relative overflow-hidden">
-        {/* Background decorative blob */}
+        
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
             <div className="absolute -top-24 -left-24 w-96 h-96 bg-[#f97316]/5 rounded-full blur-[80px]"></div>
         </div>
@@ -213,7 +213,7 @@ const About = () => {
                   </svg>
                 </div>
                 
-                {/* Stars */}
+              
                 <div className="flex gap-1 mb-6">
                   {[...Array(review.rating)].map((_, i) => (
                     <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">

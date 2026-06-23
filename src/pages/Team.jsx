@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-// Local Image Imports
+
 import ceoImg from '../img/CEO.jpeg';
 import mdImg from '../img/MD.jpeg';
 import ctoImg from '../img/CTO.jpeg';
@@ -10,7 +10,7 @@ import cfoImg from '../img/CFO.jpeg';
 import hrImg from '../img/HR.jpeg';
 
 const Team = () => {
-  // Enhanced Team Data with Categories, Expertise, and Socials
+  
   const teamMembers = [
     { 
       id: 1,
@@ -74,16 +74,16 @@ const Team = () => {
     }
   ];
 
-  // Filter State
+
   const [activeFilter, setActiveFilter] = useState('All');
   const filters = ['All', 'Leadership', 'Engineering', 'Design', 'Operations'];
 
-  // Filter Logic
+  
   const filteredTeam = activeFilter === 'All' 
     ? teamMembers 
     : teamMembers.filter(member => member.category === activeFilter);
 
-  // Animations
+  
   const fadeUp = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } }
@@ -93,7 +93,7 @@ const Team = () => {
     <div className="bg-[#f8f9fa] min-h-screen pt-32 pb-24 font-sans selection:bg-[#f97316] selection:text-white">
       <div className="max-w-[90rem] mx-auto px-6 lg:px-8">
         
-        {/* 1. Premium Header Section */}
+       
         <motion.div 
           initial="hidden" animate="visible" variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
           className="text-center max-w-4xl mx-auto mb-16"
@@ -109,7 +109,7 @@ const Team = () => {
           </motion.p>
         </motion.div>
 
-        {/* 2. Dynamic Filter Tabs */}
+        
         <motion.div 
           initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}
           className="flex flex-wrap justify-center gap-3 mb-16"
@@ -129,7 +129,7 @@ const Team = () => {
           ))}
         </motion.div>
 
-        {/* 3. Interactive Team Grid */}
+        
         <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           <AnimatePresence mode="popLayout">
             {filteredTeam.map((member) => (
@@ -142,7 +142,7 @@ const Team = () => {
                 key={member.id} 
                 className="bg-white rounded-[2rem] p-5 border border-gray-100 shadow-[0_10px_40px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] transition-shadow duration-500 group flex flex-col"
               >
-                {/* Image Container with Hover Zoom */}
+                
                 <div className="w-full aspect-square bg-[#f2f4f3] rounded-3xl overflow-hidden mb-6 relative">
                   <img 
                     src={member.img} 
@@ -150,23 +150,23 @@ const Team = () => {
                     className="w-full h-full object-cover object-top mix-blend-multiply transition-transform duration-700 ease-out group-hover:scale-110" 
                     onError={(e) => { e.target.src = 'https://via.placeholder.com/400x400?text=Profile'; }}
                   />
-                  {/* Category Badge overlaying image */}
+                 
                   <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full text-[9px] font-bold uppercase tracking-widest text-gray-800 shadow-sm">
                     {member.category}
                   </div>
                 </div>
 
-                {/* Info Content */}
+               
                 <div className="flex-grow flex flex-col">
                   <h3 className="text-xl font-black text-gray-900 tracking-tight">{member.name}</h3>
                   <p className="text-[#f97316] font-bold text-xs uppercase tracking-widest mt-1 mb-4">{member.role}</p>
                   
                   <p className="text-gray-500 text-sm leading-relaxed mb-6 flex-grow">{member.desc}</p>
                   
-                  {/* Expertise Tags & Socials Row */}
+                  
                   <div className="pt-5 border-t border-gray-100 flex items-center justify-between mt-auto">
                     
-                    {/* Tags */}
+                  
                     <div className="flex gap-2">
                       {member.expertise.map((skill, i) => (
                         <span key={i} className="text-[10px] font-semibold bg-gray-50 text-gray-600 px-2.5 py-1 rounded-md">
@@ -175,7 +175,6 @@ const Team = () => {
                       ))}
                     </div>
 
-                    {/* Social Icons */}
                     <div className="flex gap-3 text-gray-400">
                       {member.socials.linkedin && (
                         <a href={member.socials.linkedin} className="hover:text-[#f97316] transition-colors">

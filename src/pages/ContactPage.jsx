@@ -19,7 +19,7 @@ const ContactPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form Submitted:", formData);
-    // Add your form submission logic here
+  
     alert("Message sent successfully!");
   };
 
@@ -32,12 +32,11 @@ const ContactPage = () => {
     <div className="min-h-screen bg-[#f8f9fa] pt-24 pb-12 md:pt-32 md:pb-24 px-6">
       <div className="max-w-[85rem] mx-auto bg-white rounded-[2rem] md:rounded-[3rem] shadow-[0_20px_50px_rgba(0,0,0,0.05)] overflow-hidden flex flex-col lg:flex-row">
         
-        {/* Left Side: Premium Dark Branding Panel */}
         <motion.div 
           initial="hidden" animate="visible" variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
           className="w-full lg:w-5/12 bg-[#050505] p-10 md:p-16 text-white relative overflow-hidden flex flex-col justify-between"
         >
-          {/* Abstract Glow Background */}
+         
           <div className="absolute top-0 right-0 w-64 h-64 bg-[#f97316] rounded-full blur-[120px] opacity-20 pointer-events-none"></div>
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-yellow-500 rounded-full blur-[120px] opacity-10 pointer-events-none"></div>
 
@@ -76,7 +75,7 @@ const ContactPage = () => {
           </motion.div>
         </motion.div>
 
-        {/* Right Side: Form Area */}
+      
         <div className="w-full lg:w-7/12 p-10 md:p-16 bg-white">
           <form onSubmit={handleSubmit} className="flex flex-col gap-6">
             
@@ -100,7 +99,7 @@ const ContactPage = () => {
               </div>
             </div>
 
-            {/* Company & Email Row */}
+           
             <div className="flex flex-col gap-2">
               <label className="text-xs font-bold text-gray-600 uppercase tracking-wide">Company / Organization</label>
               <input 
@@ -119,7 +118,7 @@ const ContactPage = () => {
               />
             </div>
 
-            {/* Phone & Interest Row */}
+           
             <div className="flex flex-col gap-2">
               <label className="text-xs font-bold text-gray-600 uppercase tracking-wide">Phone Number <span className="text-gray-400 font-normal capitalize">(Optional)</span></label>
               <input 
@@ -144,7 +143,7 @@ const ContactPage = () => {
               </select>
             </div>
 
-            {/* Message Area */}
+         
             <div className="flex flex-col gap-2">
               <label className="text-xs font-bold text-gray-600 uppercase tracking-wide">Project Description</label>
               <textarea 
@@ -154,7 +153,7 @@ const ContactPage = () => {
               ></textarea>
             </div>
 
-            {/* Submit Button */}
+           
             <motion.button 
               whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}
               type="submit"

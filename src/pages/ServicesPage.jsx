@@ -1,4 +1,4 @@
-import React from "react";
+
 import { motion } from "framer-motion";
 
 const ServicesPage = () => {
@@ -17,7 +17,7 @@ const ServicesPage = () => {
     visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
   };
 
-  // Service Data Array (Extracted & refined from your image)
+ 
   const servicesData = [
     {
       id: "01",
@@ -139,7 +139,7 @@ const ServicesPage = () => {
 
   return (
     <div className="bg-white min-h-screen">
-      {/* Cinematic Header */}
+      
       <section className="relative pt-40 pb-20 md:pt-48 md:pb-32 bg-[#050505] text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#f97316] rounded-full blur-[150px] opacity-20 pointer-events-none"></div>
@@ -170,7 +170,7 @@ const ServicesPage = () => {
         </motion.div>
       </section>
 
-      {/* Main Services Content */}
+     
       <section className="py-20">
         <div className="max-w-[90rem] mx-auto px-6 lg:px-8">
           {servicesData.map((service, index) => (
@@ -178,7 +178,7 @@ const ServicesPage = () => {
               key={index}
               className="flex flex-col lg:flex-row gap-12 lg:gap-20 py-20 border-b border-gray-100 last:border-0 relative"
             >
-              {/* Left Column: Sticky Title & Image */}
+             
               <div className="w-full lg:w-5/12 lg:sticky lg:top-32 h-fit">
                 <motion.div
                   initial="hidden"
@@ -196,7 +196,7 @@ const ServicesPage = () => {
                   </div>
                   <div className="w-16 h-1 bg-[#f97316] mb-6"></div>
 
-                  {/* Premium Image Block */}
+                 
                   <div className="w-full aspect-video rounded-3xl overflow-hidden shadow-lg mb-6 group bg-gray-100">
                     <img
                       src={service.img}
@@ -212,7 +212,7 @@ const ServicesPage = () => {
                 </motion.div>
               </div>
 
-              {/* Right Column: Scrolling Features List */}
+            
               <div className="w-full lg:w-7/12 pt-0 lg:pt-16">
                 <div className="flex flex-col gap-8">
                   {service.features.map((feature, fIndex) => (
@@ -224,7 +224,7 @@ const ServicesPage = () => {
                       variants={fadeUp}
                       className="bg-gray-50 border border-gray-100 p-8 rounded-3xl hover:bg-white hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] hover:border-[#f97316]/20 transition-all duration-300 group flex gap-6"
                     >
-                      {/* Hexagon/Icon Wrapper */}
+                     
                       <div className="shrink-0 w-14 h-14 rounded-2xl bg-white shadow-sm border border-gray-100 flex items-center justify-center text-[#f97316] group-hover:bg-[#f97316] group-hover:text-white transition-colors duration-300">
                         <svg
                           className="w-6 h-6"
@@ -242,7 +242,7 @@ const ServicesPage = () => {
                         </svg>
                       </div>
 
-                      {/* Text Details */}
+                    
                       <div>
                         <h4 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#f97316] transition-colors">
                           {feature.title}

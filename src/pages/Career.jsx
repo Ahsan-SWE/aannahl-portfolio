@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Career = () => {
   const [expandedId, setExpandedId] = useState(null);
 
-  // Job Data
+  
   const jobs = [
     {
       id: 1,
@@ -67,7 +67,7 @@ const Career = () => {
     }
   ];
 
-  // Benefits Data
+ 
   const benefits = [
     { title: "Health & Wellness", text: "Comprehensive health coverage for you and your family.", icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" },
     { title: "Continuous Growth", text: "Annual learning stipends and access to global conferences.", icon: "M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" },
@@ -87,9 +87,9 @@ const Career = () => {
   return (
     <div className="bg-white min-h-screen selection:bg-[#f97316] selection:text-white">
       
-      {/* 1. ULTRA-MINIMAL HERO SECTION */}
+     
       <section className="relative pt-40 pb-24 md:pt-56 md:pb-32 bg-[#050505] overflow-hidden">
-        {/* Soft Mesh Gradient Background */}
+        
         <div className="absolute inset-0 z-0 opacity-40">
           <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-[#f97316] rounded-full blur-[150px] mix-blend-screen"></div>
           <div className="absolute bottom-[-20%] left-[-10%] w-[500px] h-[500px] bg-[#2a2a2a] rounded-full blur-[120px] mix-blend-screen"></div>
@@ -112,7 +112,7 @@ const Career = () => {
         </div>
       </section>
 
-      {/* 2. PREMIUM PERKS (Why Join Us) */}
+    
       <section className="py-24 bg-[#fcfcfc] border-b border-gray-100">
         <div className="max-w-[80rem] mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -136,7 +136,7 @@ const Career = () => {
         </div>
       </section>
 
-      {/* 3. SLEEK ROW-BASED JOB LISTINGS (No bulky boxes) */}
+     
       <section className="py-24 md:py-32">
         <div className="max-w-[65rem] mx-auto px-6 lg:px-8">
           
@@ -153,7 +153,7 @@ const Career = () => {
 
               return (
                 <div key={job.id} className="border-b border-gray-200 group">
-                  {/* Clean Clickable Row */}
+                  
                   <div 
                     onClick={() => toggleExpand(job.id)}
                     className="py-8 cursor-pointer flex flex-col md:flex-row md:items-center justify-between gap-6 hover:bg-gray-50 transition-colors duration-300 px-4 -mx-4 rounded-xl"
@@ -179,7 +179,7 @@ const Career = () => {
                     </div>
                   </div>
 
-                  {/* Elegant Expandable Details */}
+                
                   <AnimatePresence>
                     {isExpanded && (
                       <motion.div
@@ -192,7 +192,7 @@ const Career = () => {
                           </p>
 
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                            {/* Responsibilities */}
+                            
                             <div>
                               <h4 className="text-sm font-bold text-gray-900 uppercase tracking-widest mb-6">What you'll do</h4>
                               <ul className="space-y-4">
@@ -205,7 +205,7 @@ const Career = () => {
                               </ul>
                             </div>
 
-                            {/* Requirements */}
+                            
                             <div>
                               <h4 className="text-sm font-bold text-gray-900 uppercase tracking-widest mb-6">What you'll need</h4>
                               <ul className="space-y-4">
