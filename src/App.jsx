@@ -9,6 +9,12 @@ import Team from './pages/Team';
 import ServicesPage from './pages/ServicesPage';
 import Career from './pages/Career';
 import ContactPage from './pages/ContactPage';
+import PortfolioPage from './pages/PortfolioPage';
+// File-er upore import koro
+import ProjectDetails from './pages/ProjectDetails';
+
+
+
 
 
 import Hero from './components/Hero';
@@ -63,7 +69,8 @@ export default function App() {
   
  <Route path="/team" element={<Team />} />
   <Route path="/services" element={<ServicesPage />} />
-  <Route path="/portfolio" element={<PageWrapper title="Full Portfolio" />} />
+  <Route path="/portfolio" element={<PortfolioPage />} />
+  <Route path="/portfolio/:id" element={<ProjectDetails />} />
  <Route path="/career" element={<Career />} />
  <Route path="/contact" element={<ContactPage />} />
 
